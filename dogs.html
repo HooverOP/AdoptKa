@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dogs for Adoption</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            text-align: center;
+            background-color: #34495e;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 10px;
+            background-color: #2c3e50;
+            border-radius: 4px;
+        }
+
+        nav a:hover {
+            background-color: #1e2b37;
+        }
+
+        section {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #8c4d3a;
+            margin-bottom: 15px;
+        }
+
+        /* Pet Cards Styling */
+        .pet-list {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .pet-card {
+            width: 30%;
+            padding: 15px;
+            background-color: #e6e8e9;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .pet-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .pet-card h3 {
+            color: #2c3e50;
+        }
+
+        .pet-card p {
+            margin-top: 5px;
+        }
+
+        .pet-card button {
+            margin-top: 10px;
+            padding: 8px 15px;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .pet-card button:hover {
+            background-color: #1e8449;
+        }
+
+        /* Post a Pet Section */
+        .post-pet {
+            margin-top: 30px;
+            background-color: #f5f7f8;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .post-pet h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .post-pet form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .post-pet form input,
+        .post-pet form textarea,
+        .post-pet form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .post-pet form button {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .post-pet form button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .pet-list {
+                flex-direction: column;
+            }
+
+            .pet-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dogs for Adoption</h1>
+        <p>Find a loyal friend and give them a forever home!</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="cats.html">Cats</a>
+        <a href="#post-pet">Post a Pet</a>
+    </nav>
+
+    <!-- Available Dogs Section -->
+    <section id="available-pets">
+        <h2>Meet Our Dogs</h2>
+        <div class="pet-list">
+            <div class="pet-card">
+                <img src="dog1.jpg" alt="Dog 1">
+                <h3>Buddy</h3>
+                <p>Age: 2 years</p>
+                <p>Breed: Labrador Retriever</p>
+                <button>Adopt Buddy</button>
+            </div>
+            <div class="pet-card">
+                <img src="dog2.jpg" alt="Dog 2">
+                <h3>Charlie</h3>
+                <p>Age: 3 years</p>
+                <p>Breed: Beagle</p>
+                <button>Adopt Charlie</button>
+            </div>
+            <div class="pet-card">
+                <img src="dog3.jpg" alt="Dog 3">
+                <h3>Rocky</h3>
+                <p>Age: 4 years</p>
+                <p>Breed: German Shepherd</p>
+                <button>Adopt Rocky</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Post a Pet Section -->
+    <section id="post-pet" class="post-pet">
+        <h3>Post Your Pet for Adoption</h3>
+        <form>
+            <label for="pet-name">Pet Name</label>
+            <input type="text" id="pet-name" name="pet-name" placeholder="Enter pet's name" required>
+
+            <label for="pet-age">Pet Age</label>
+            <input type="number" id="pet-age" name="pet-age" placeholder="Enter pet's age" required>
+
+            <label for="pet-breed">Pet Breed</label>
+            <input type="text" id="pet-breed" name="pet-breed" placeholder="Enter pet's breed" required>
+
+            <label for="pet-description">Description</label>
+            <textarea id="pet-description" name="pet-description" rows="4" placeholder="Provide a brief description"></textarea>
+
+            <button type="submit">Submit for Adoption</button>
+        </form>
+    </section>
+</body>
+</html>
