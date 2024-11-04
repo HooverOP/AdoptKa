@@ -8,6 +8,11 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background-color: #c8dfcd;
+      }
+    </style>
     <title>AdoptKa</title>
   </head>
   <body>
@@ -29,7 +34,7 @@
             <a class="nav-link active" aria-current="page" href="/petspage.html"
               >Pets</a
             >
-            <a class="nav-link" href="#">Clinics</a>
+            <a class="nav-link" href="/petspage.html">Clinics</a>
             <a class="nav-link" href="#">About Us</a>
             <a class="nav-link disabled" aria-disabled="true">Partner</a>
           </div>
@@ -39,40 +44,43 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-4">
+        <div class="col-md-4 col-12 p-5">
           <img
             src="/img/logo.jpg"
             alt="logo"
             class="img-fluid rounded-circle" />
         </div>
 
-        <div class="col-8 p-5">
+        <div class="col-md-8 col-12 p-5">
           <h1>Welcome to AdoptKa</h1>
           <p>
-            At AdpotKa, we&apos;re dedicated to finding loving homes for pets in
-            need and providing quality healthcare services for all pets. Explore
-            our adoption options, book appointments with our skilled
-            veterinarians, and check out our range of pet products!
+            At AdoptKa, we’re dedicated to finding loving homes for pets in need
+            and providing quality healthcare services for all pets. Explore our
+            adoption options, book appointments with our skilled veterinarians,
+            and check out our range of pet products!
           </p>
         </div>
       </div>
     </div>
 
-    <h2 class="text-center">Available Pet&apos;s up for Adoption</h2>
+    <h2 class="text-center mb-5">Available Pet&apos;s up for Adoption</h2>
 
     <div class="container">
       <div class="row">
         <div class="col">
-          <a href="/pet.html">
-            <div class="card" style="width: 18rem">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <p class="card-text">
-                  Mr. bambam | Cat | (What he likes, or like personalities)
-                </p>
-              </div>
+          <div class="card" style="width: 18rem">
+            <a href="/pet.html">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGhCFXE1agtTKU9200N0bmpE5f27nPsNgXyB8ZihQSDwHI9N5XlvsrmrD0UuZctJejh_8&usqp=CAU"
+                class="card-img-top"
+                alt="..." />
+            </a>
+            <div class="card-body">
+              <p class="card-text">
+                Mr. bambam | Cat | (What he likes, or like personalities)
+              </p>
             </div>
-          </a>
+          </div>
         </div>
 
         <div class="col">
@@ -111,5 +119,10 @@
     </div>
 
     <div></div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
   </body>
 </html>
