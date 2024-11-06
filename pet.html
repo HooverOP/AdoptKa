@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous" />
     <title>Individual Pet</title>
     <style>
       /* Basic Reset */
@@ -45,15 +50,19 @@
 
       /* Gallery */
       .gallery {
-        display: flex;
-        gap: 10px;
-        flex-wrap: wrap;
-        justify-content: space-around;
         margin-top: 10px;
       }
 
-      .gallery img {
-        width: 48%;
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+        gap: 10px;
+        justify-content: center;
+        margin-top: 10px;
+      }
+
+      .gallery-grid img {
+        width: 100%;
         height: auto;
         border-radius: 8px;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -89,6 +98,32 @@
     </style>
   </head>
   <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">AdoptKa</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="/petspage.html"
+              >Pets</a
+            >
+            <a class="nav-link" href="/petspage.html">Clinics</a>
+            <a class="nav-link" href="#">About Us</a>
+            <a class="nav-link disabled" aria-disabled="true">Partner</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
     <header>
       <h1>Meet [Mr. bambam!]</h1>
     </header>
@@ -108,18 +143,20 @@
     <!-- Gallery Section -->
     <section class="gallery">
       <h2>Gallery</h2>
-      <img
-        src="https://clubcatt.com/cdn/shop/articles/ragdoll-cat-breed.webp?v=1691442856&width=1100"
-        alt="Image of Mr. bambam" />
-      <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBTgTudm3APjpeL_84K7CJQ31z_LiAZ3cdjTSShobz8gxBy0S0KTu-tGGUcKdT-S0Qiu4&usqp=CAU"
-        alt="Image of Mr. bambam" />
-      <img
-        src="https://cattime.com/wp-content/uploads/sites/14/2011/12/GettyImages-1319206416.jpg?resize=1200,630"
-        alt="Image of Mr. bambam" />
-      <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGhCFXE1agtTKU9200N0bmpE5f27nPsNgXyB8ZihQSDwHI9N5XlvsrmrD0UuZctJejh_8&usqp=CAU"
-        alt="Image of Mr. bambam" />
+      <div class="gallery-grid">
+        <img
+          src="https://clubcatt.com/cdn/shop/articles/ragdoll-cat-breed.webp?v=1691442856&width=1100"
+          alt="Image of Mr. bambam" />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBTgTudm3APjpeL_84K7CJQ31z_LiAZ3cdjTSShobz8gxBy0S0KTu-tGGUcKdT-S0Qiu4&usqp=CAU"
+          alt="Image of Mr. bambam" />
+        <img
+          src="https://cattime.com/wp-content/uploads/sites/14/2011/12/GettyImages-1319206416.jpg?resize=1200,630"
+          alt="Image of Mr. bambam" />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGhCFXE1agtTKU9200N0bmpE5f27nPsNgXyB8ZihQSDwHI9N5XlvsrmrD0UuZctJejh_8&usqp=CAU"
+          alt="Image of Mr. bambam" />
+      </div>
     </section>
 
     <!-- Adoption Contact Section -->
@@ -133,5 +170,10 @@
       <p><strong>Phone:</strong> +123-456-7890</p>
       <a href="mailto:adopt@petclinic.com">Adopt Now</a>
     </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
   </body>
 </html>
