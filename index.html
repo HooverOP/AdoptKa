@@ -35,7 +35,7 @@
               >Pets</a
             >
             <a class="nav-link" href="/petspage.html">Clinics</a>
-            <a class="nav-link" href="#">About Us</a>
+            <a class="nav-link" href="/form.html">About Us</a>
             <a class="nav-link disabled" aria-disabled="true">Partner</a>
           </div>
         </div>
@@ -66,7 +66,7 @@
     <h2 class="text-center mb-5">Available Pet&apos;s up for Adoption</h2>
 
     <div class="container">
-      <div class="row">
+      <div class="row" id="row">
         <div class="col">
           <div class="card" style="width: 18rem">
             <a href="/pet.html">
@@ -82,54 +82,43 @@
             </div>
           </div>
         </div>
-
-        <div class="col">
-          <div class="card" style="width: 18rem">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGhCFXE1agtTKU9200N0bmpE5f27nPsNgXyB8ZihQSDwHI9N5XlvsrmrD0UuZctJejh_8&usqp=CAU"
-              class="card-img-top"
-              alt="..." />
-            <div class="card-body">
-              <p class="card-text">
-                Mr. bambam | Cat | (What he likes, or like personalities)
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card" style="width: 18rem">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGhCFXE1agtTKU9200N0bmpE5f27nPsNgXyB8ZihQSDwHI9N5XlvsrmrD0UuZctJejh_8&usqp=CAU"
-              class="card-img-top"
-              alt="..." />
-            <div class="card-body">
-              <p class="card-text">
-                Mr. bambam | Cat | (What he likes, or like personalities)
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card" style="width: 18rem">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGhCFXE1agtTKU9200N0bmpE5f27nPsNgXyB8ZihQSDwHI9N5XlvsrmrD0UuZctJejh_8&usqp=CAU"
-              class="card-img-top"
-              alt="..." />
-            <div class="card-body">
-              <p class="card-text">
-                Mr. bambam | Cat | (What he likes, or like personalities)
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"></script>
+
+    <script>
+      function displayPets() {
+        const pets = JSON.parse(localStorage.getItem("pets")) || [];
+        const rowContainer = document.getElementById("row");
+
+        pets.forEach((pet) => {
+          const col = document.createElement("div");
+          col.className = "col";
+
+          col.innerHTML = `
+      <div class="card" style="width: 18rem">
+        <a href="/pet.html">
+          <img
+            src="${pet.photo}"
+            class="card-img-top"
+            alt="${pet.name}" />
+        </a>
+        <div class="card-body">
+          <p class="card-text">
+            ${pet.name} | ${pet.type} | ${pet.description}
+          </p>
+        </div>
+      </div>
+    `;
+          rowContainer.appendChild(col);
+        });
+      }
+
+      // Call the function to display pets when the page loads
+      document.addEventListener("DOMContentLoaded", displayPets);
+    </script>
   </body>
 </html>
