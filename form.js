@@ -1,7 +1,6 @@
 document.querySelector("form").addEventListener("submit", function (event) {
-  event.preventDefault(); // Prevent form submission
+  event.preventDefault();
 
-  // Get form values
   const name = document.getElementById("name").value;
   const age = document.getElementById("age").value;
   const type = document.getElementById("type").value;
@@ -18,7 +17,6 @@ document.querySelector("form").addEventListener("submit", function (event) {
 
     const petData = {
       name,
-      age,
       type,
       breed,
       photo,

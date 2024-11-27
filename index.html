@@ -2,20 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AdoptKa</title>
+
+    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <style>
       body {
         background-color: #c8dfcd;
       }
     </style>
-    <title>AdoptKa</title>
   </head>
   <body>
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <a class="navbar-brand" href="/">AdoptKa</a>
@@ -31,17 +35,16 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="/petspage.html"
-              >Pets</a
-            >
-            <a class="nav-link" href="/petspage.html">Clinics</a>
+            <a class="nav-link" href="/clinics.html">Clinics</a>
             <a class="nav-link" href="/form.html">About Us</a>
+            <a class="nav-link" href="/products.html">Products</a>
             <a class="nav-link disabled" aria-disabled="true">Partner</a>
           </div>
         </div>
       </div>
     </nav>
 
+    <!-- Welcome Section -->
     <div class="container">
       <div class="row">
         <div class="col-md-4 col-12 p-5">
@@ -50,7 +53,6 @@
             alt="logo"
             class="img-fluid rounded-circle" />
         </div>
-
         <div class="col-md-8 col-12 p-5">
           <h1>Welcome to AdoptKa</h1>
           <p>
@@ -63,7 +65,8 @@
       </div>
     </div>
 
-    <h2 class="text-center mb-5">Available Pet&apos;s up for Adoption</h2>
+    <!-- Available Pets Section -->
+    <h2 class="text-center mb-5">Available Pet's up for Adoption</h2>
 
     <div class="container">
       <div class="row" id="row">
@@ -73,22 +76,25 @@
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGhCFXE1agtTKU9200N0bmpE5f27nPsNgXyB8ZihQSDwHI9N5XlvsrmrD0UuZctJejh_8&usqp=CAU"
                 class="card-img-top"
-                alt="..." />
+                alt="Mr. Bambam" />
             </a>
             <div class="card-body">
               <p class="card-text">
-                Mr. bambam | Cat | (What he likes, or like personalities)
+                Mr. Bambam | Cat | (What he likes, or like personalities)
               </p>
             </div>
           </div>
         </div>
+      </div>
     </div>
 
+    <!-- Bootstrap JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"></script>
 
+    <!-- JavaScript for Dynamic Pets -->
     <script>
       function displayPets() {
         const pets = JSON.parse(localStorage.getItem("pets")) || [];
@@ -99,20 +105,21 @@
           col.className = "col";
 
           col.innerHTML = `
-      <div class="card" style="width: 18rem">
-        <a href="/pet.html">
-          <img
-            src="${pet.photo}"
-            class="card-img-top"
-            alt="${pet.name}" />
-        </a>
-        <div class="card-body">
-          <p class="card-text">
-            ${pet.name} | ${pet.type} | ${pet.description}
-          </p>
-        </div>
-      </div>
-    `;
+            <div class="card" style="width: 18rem">
+              <a href="/pet.html">
+                <img
+                  src="${pet.photo}"
+                  class="card-img-top"
+                  alt="${pet.name}"
+                />
+              </a>
+              <div class="card-body">
+                <p class="card-text">
+                  ${pet.name} | ${pet.type} | ${pet.description}
+                </p>
+              </div>
+            </div>
+          `;
           rowContainer.appendChild(col);
         });
       }
