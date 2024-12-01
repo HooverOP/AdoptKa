@@ -32,10 +32,21 @@
         padding: 1rem 0;
         text-align: center;
       }
+      .hero-image {
+        max-height: 300px;
+        object-fit: cover;
+        width: 100%;
+        border-radius: 10px;
+      }
+      .section-title {
+        font-weight: bold;
+        margin-top: 20px;
+      }
     </style>
-    <title>Luxury Cat Bed - Product Details</title>
+    <title>About Us - AdoptKa</title>
   </head>
   <body>
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <a class="navbar-brand" href="/">AdoptKa</a>
@@ -54,62 +65,57 @@
             <a class="nav-link" href="/clinics.html">Clinics</a>
             <a class="nav-link" href="/products.html">Products</a>
             <a class="nav-link" href="/about.html">About Us</a>
-            <a class="nav-link disabled" aria-disabled="true">Partner</a>
+            <a class="nav-link" href="/form.html">Partner</a>
           </div>
         </div>
       </div>
     </nav>
 
     <div class="container my-5">
-      <h1 class="product-name">Luxury Cat Bed</h1>
+      <h1 class="text-center text-primary">About AdoptKa</h1>
+      <p class="text-center">
+        Your partner in connecting pets with loving homes.
+      </p>
 
-      <div class="row">
-        <!-- Images Section -->
-        <div class="col-md-6">
-          <img
-            src="/img/C71NHS-11__59921.jpg"
-            alt="Luxury Cat Bed"
-            class="img-fluid product-img" />
-          <br />
-          <img
-            src="/img/images.jpg"
-            alt="Luxury Cat Bed - Alternate View"
-            class="img-fluid product-img" />
-        </div>
-
-        <!-- Details Section -->
-        <div class="col-md-6">
-          <p class="product-description">
-            Treat your furry friend to ultimate comfort with this soft and cozy
-            Luxury Cat Bed. Perfect for naps and designed with premium materials
-            to ensure durability and style.
-          </p>
-          <h3>Product Details</h3>
-          <ul>
-            <li><strong>Material:</strong> Plush fabric</li>
-            <li><strong>Dimensions:</strong> 24 x 18 x 6 inches</li>
-            <li><strong>Color Options:</strong> Gray, Light Blue</li>
-            <li><strong>Washable:</strong> Machine washable cover</li>
-          </ul>
-          <h3 class="mt-3">Price: 25000 IQD</h3>
-
-          <h3 class="mt-4">Contact Information</h3>
-          <p>
-            For inquiries, call <strong>+964771234567</strong> or email us at
-            <a href="mailto:info@adoptka.com">info@adoptka.com</a>.
-          </p>
-
-          <h3 class="mt-4">Delivery</h3>
-          <p>
-            Anywhere in Duhok: 5000 IQD <br />
-            Ohter Provinces : 8000 IQD
-          </p>
-        </div>
+      <!-- Hero Image -->
+      <div class="text-center my-4">
+        <img src="/img/logo.jpg" alt="About AdoptKa" class="hero-image" />
       </div>
+
+      <!-- About Content -->
+      <section>
+        <h2 class="section-title">Our Mission</h2>
+        <p>
+          At AdoptKa, we believe that every animal deserves a loving home. Our
+          mission is to make adoption easy, accessible, and transparent for
+          everyone. Whether you’re looking for your first pet or an addition to
+          your family, we’re here to guide you through the process.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="section-title">Why Choose Us?</h2>
+        <p>
+          AdoptKa is not just a platform; it's a community of animal lovers. We
+          work closely with shelters, clinics, and pet owners to ensure that
+          each adoption is a perfect match. Our goal is to promote responsible
+          pet ownership while helping pets find their forever homes.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="section-title">Contact Us</h2>
+        <p>
+          Have questions or suggestions? Feel free to reach out! We’re always
+          here to help.
+        </p>
+        <p><strong>Email:</strong> support@adoptka.com</p>
+        <p><strong>Phone:</strong> +964771234567</p>
+      </section>
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer mt-5">
       <p>© 2024 AdoptKa. All Rights Reserved | Designed with ❤️ for pets.</p>
     </footer>
 

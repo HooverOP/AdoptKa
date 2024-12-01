@@ -17,13 +17,31 @@
 
       /* General Styles */
       body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        color: #333;
+        background-color: #c8dfcd;
+      }
+      .navbar-brand,
+      .nav-link {
+        transition: color 0.3s ease;
+      }
+      .nav-link:hover {
+        color: #28a745;
+      }
+      .clinic-card:hover,
+      .product-card:hover,
+      .card:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+      .footer {
+        background-color: #2c3e50;
+        color: #ecf0f1;
+        padding: 1rem 0;
+        text-align: center;
       }
 
       header {
-        background-color: #2c3e50;
+        background-color: #00411b;
         color: white;
         padding: 20px;
         text-align: center;
@@ -98,6 +116,7 @@
     </style>
   </head>
   <body>
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <a class="navbar-brand" href="/">AdoptKa</a>
@@ -113,11 +132,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="/petspage.html"
-              >Pets</a
-            >
-            <a class="nav-link" href="/petspage.html">Clinics</a>
-            <a class="nav-link" href="#">About Us</a>
+            <a class="nav-link" href="/clinics.html">Clinics</a>
+            <a class="nav-link" href="/products.html">Products</a>
+            <a class="nav-link" href="/about.html">About Us</a>
             <a class="nav-link disabled" aria-disabled="true">Partner</a>
           </div>
         </div>
@@ -170,6 +187,11 @@
       <p><strong>Phone:</strong> +123-456-7890</p>
       <a href="mailto:adopt@petclinic.com">Adopt Now</a>
     </section>
+
+    <!-- Footer -->
+    <footer class="footer mt-5">
+      <p>© 2024 AdoptKa. All Rights Reserved | Designed with ❤️ for pets.</p>
+    </footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
