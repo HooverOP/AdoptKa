@@ -108,16 +108,20 @@
       </div>
     </div>
 
+    <!-- Available Pets Section -->
+    <h2 class="text-center mb-5">Available Pet's up for Adoption</h2>
+
     <div class="container my-5">
       <h2 class="text-center text-success mb-5">Available Pets for Adoption</h2>
-      <div class="pets-scroll-container" id="petsContainer">
+      <div class="pets-scroll-container container" id="petsContainer">
         <!-- Pet 1 -->
         <div class="card" style="width: 18rem; flex-shrink: 0">
           <a href="/pet.html">
             <img
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGhCFXE1agtTKU9200N0bmpE5f27nPsNgXyB8ZihQSDwHI9N5XlvsrmrD0UuZctJejh_8&usqp=CAU"
               class="card-img-top"
-              alt="Mr. Bambam" />
+              alt="Mr. Bambam"
+              style="height: 12rem" />
           </a>
           <div class="card-body">
             <p class="card-text text-center">
@@ -131,7 +135,8 @@
             <img
               src="https://www.bokksu.com/cdn/shop/articles/shutterstock_2331307681.jpg?v=1707885857"
               class="card-img-top"
-              alt="Mr. Bambam" />
+              alt="Mr. Bambam"
+              style="height: 12rem" />
           </a>
           <div class="card-body">
             <p class="card-text text-center">
@@ -262,7 +267,7 @@
     <script>
       function displayPets() {
         const pets = JSON.parse(localStorage.getItem("pets")) || [];
-        const rowContainer = document.getElementById("row");
+        const rowContainer = document.getElementById("petsContainer");
 
         pets.forEach((pet) => {
           const col = document.createElement("div");
@@ -275,6 +280,7 @@
                   src="${pet.photo}"
                   class="card-img-top"
                   alt="${pet.name}"
+                  style="height: 12rem"
                 />
               </a>
               <div class="card-body">
